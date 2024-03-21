@@ -2,6 +2,6 @@
 --count the number of fans for each origin
 --order by number of fans in descending order
 SELECT origin, COUNT(*) AS nb_fans
-FROM metal_band
+FROM metal_bands
 GROUP BY origin
 ORDER BY nb_fans DESC;
