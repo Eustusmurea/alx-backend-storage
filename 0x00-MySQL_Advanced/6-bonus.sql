@@ -1,6 +1,6 @@
 -- create a table named users with the following columns:
 DELIMITER//
-CREATE PROCEDURE bonus( IN user_id INT, project_name VARCHAR(255), IN score INT )
+CREATE PROCEDURE AddBonus( IN user_id INT, project_name VARCHAR(255), IN score INT )
 BEGIN
     SET @project_id = (SELECT id FROM projects WHERE name = project_name);
     IF @project_id IS NULL THEN
