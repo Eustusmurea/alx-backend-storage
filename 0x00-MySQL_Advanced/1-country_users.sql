@@ -1,5 +1,5 @@
 -- Create a table named users with the following columns:
-drop table users;
+DROP TABLE users IF EXISTS;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
