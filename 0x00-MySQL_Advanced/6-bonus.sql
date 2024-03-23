@@ -6,7 +6,7 @@ BEGIN
     IF @project_id IS NULL THEN
      INSERT INTO projects (name) VALUES (project_name);
      SET @project_id = LAST_INSERT_ID();
-END IF;
-INSERT INTO scores (user_id, project_id, score) VALUES (user_id, @project_id, score);
+    END IF;
+    INSERT INTO scores (user_id, project_id, score) VALUES (user_id, @project_id, score);
 END//
 DELIMITER;
