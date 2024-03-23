@@ -1,11 +1,5 @@
--- create a table to store two numbers
-CREATE TABLE IF NOT EXISTS numbers (
-    a INT DEFAULT 0,
-    b INT DEFAULT 0
-);
-
+-- add delimeter to change the default delimiter
 DELIMITER //
-
 -- create a function that will return the result of a safe division
 CREATE FUNCTION SafeDiv(a INT, b INT)
 RETURNS DECIMAL(10, 2)
@@ -17,5 +11,4 @@ BEGIN
     END IF;
 END;
 //
-
 DELIMITER ;
