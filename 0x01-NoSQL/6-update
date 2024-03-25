@@ -11,4 +11,3 @@ var update = { $set: { address: "972 Mission street" } }
 var result = collection.updateMany(filter, update);
 
 print("Number of documents updated: " + result.modifiedCount);
-

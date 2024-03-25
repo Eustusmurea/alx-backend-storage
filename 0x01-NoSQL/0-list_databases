@@ -15,4 +15,3 @@ databases.databases.forEach(function(database) {
 
 // Exit the shell
 quit();
-

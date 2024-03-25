@@ -9,4 +9,3 @@ db.school.insertOne({
 });
 
 print("Document inserted into 'school' collection in database '" + dbName + "'");
-

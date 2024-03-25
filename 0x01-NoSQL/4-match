@@ -13,4 +13,3 @@ while (cursor.hasNext()) {
     var document = cursor.next();
     printjson(document);
 }
-

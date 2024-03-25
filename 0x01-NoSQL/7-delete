@@ -6,4 +6,3 @@ var collection = db.school;
 var filter = { name: "Holberton school" };
 var result = collection.deleteMany(filter);
 print("Number of documents deleted: " + result.deletedCount);
-
