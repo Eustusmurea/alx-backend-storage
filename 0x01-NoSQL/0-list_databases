@@ -1,4 +1,4 @@
-// Connect to MongoDB server
+// my comment
 var conn = new Mongo();
 
 // Access the admin database
