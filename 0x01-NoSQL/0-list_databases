@@ -1,10 +1,2 @@
 // my comment
-var conn = new Mongo();
-
-var databaseNames= conn.getDBNames();
-
-// Print the list of databases
-print("List of databases");
-databasesNames.forEach(function(dbName) {
-    print(dbName);
-});
+show databases
