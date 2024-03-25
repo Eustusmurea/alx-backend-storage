@@ -8,5 +8,3 @@ print("List of databases");
 databasesNames.forEach(function(dbName) {
     print(dbName);
 });
-
-quit();
