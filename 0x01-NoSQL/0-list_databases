@@ -1,17 +1,12 @@
 // my comment
 var conn = new Mongo();
 
-// Access the admin database
-var db = conn.getDB("admin");
-
-// Get the list of databases
-var databases = db.adminCommand({ listDatabases: 1 });
+var databaseNames= conn.getDBNames();
 
 // Print the list of databases
-print("Databases:");
-databases.databases.forEach(function(database) {
-    print(database.name + "\t" + (database.sizeOnDisk / (1024*1024)).toFixed(3) + "GB");
+print("List of databases");
+databasesNames.forEach(function(dbName) {
+    print(dbName);
 });
 
-// Exit the shell
 quit();
