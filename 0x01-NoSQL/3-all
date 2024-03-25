@@ -1,18 +1,2 @@
-// Connect to MongoDB server
-var conn = new Mongo();
-
-// Access the specified database
-var db = conn.getDB("my_db");
-
-// Access the "school" collection
-var collection = db.school;
-
-// Find all documents in the collection
-var cursor = collection.find();
-
-print("Documents in the 'school' collection:");
-while (cursor.hasNext()) {
-    var document = cursor.next();
-    printjson(document);
-}
-
+// List all documents
+db.school.find()

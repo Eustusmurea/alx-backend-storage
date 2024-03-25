@@ -1,10 +1,2 @@
-//script that displays the number of documents in the collection school:
-var conn = new Mongo();
-
-var dbName = "my_db";
-var db = conn.getDB(dbName);
-var collection = db.school;
-
-var count = collection.count();
-
-print("Number of documents in the 'school' collection: " + count);
+// Count
+db.school.count()

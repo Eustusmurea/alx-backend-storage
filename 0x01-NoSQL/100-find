@@ -1,10 +1,2 @@
-//script that lists all documents with name starting by Holberton in the collection school
-
-var conn = new Mongo();
-var dbName = "my_db";
-var db = conn.getDB(dbName);
-var collection = db.school;
-var cursor = collection.find({ name: /^Holberton/ });
-while (cursor.hasNext()) {
-    printjson(cursor.next());
-}
+// Regex filter
+db.school.find({name: /^Holberton/ })
