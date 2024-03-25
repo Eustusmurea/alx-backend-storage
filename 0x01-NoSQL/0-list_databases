@@ -1,0 +1,18 @@
+// Connect to MongoDB server
+var conn = new Mongo();
+
+// Access the admin database
+var db = conn.getDB("admin");
+
+// Get the list of databases
+var databases = db.adminCommand({ listDatabases: 1 });
+
+// Print the list of databases
+print("Databases:");
+databases.databases.forEach(function(database) {
+    print(database.name + "\t" + (database.sizeOnDisk / (1024*1024)).toFixed(3) + "GB");
+});
+
+// Exit the shell
+quit();
+

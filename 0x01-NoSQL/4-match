@@ -1,0 +1,16 @@
+// script to list all documents with holberton in collection school
+var conn = new Mongo();
+
+// Specify the database name
+var dbName = "my_db";
+var db = conn.getDB(dbName);
+var collection = db.school;
+var query = { name: "Holberton school" };
+var cursor = collection.find(query);
+
+print("Documents in the 'school' collection with name='Holberton school':");
+while (cursor.hasNext()) {
+    var document = cursor.next();
+    printjson(document);
+}
+

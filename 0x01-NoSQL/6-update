@@ -1,0 +1,14 @@
+//script that adds a new attribute to a document in the collection school
+var conn = new Mongo();
+var dbName = "my_db";
+
+var db = conn.getDB(dbName);
+var collection = db.school;
+
+var collection = db.school;
+var filter = { name: "Holberton school" };
+var update = { $set: { address: "972 Mission street" } }
+var result = collection.updateMany(filter, update);
+
+print("Number of documents updated: " + result.modifiedCount);
+

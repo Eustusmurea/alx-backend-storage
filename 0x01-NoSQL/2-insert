@@ -1,0 +1,12 @@
+// Check if database name is provided as an argument
+var dbName = "my_db";
+
+var conn = new Mongo();
+var db = conn.getDB(dbName);
+
+db.school.insertOne({
+    name: "Holberton school"
+});
+
+print("Document inserted into 'school' collection in database '" + dbName + "'");
+

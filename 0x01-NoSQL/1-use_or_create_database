@@ -1,0 +1,9 @@
+// connect to MongoSB server - js
+
+var conn = new Mongo()
+
+var db = conn.getDB("my_db")
+
+print("Now using 'my_db'")
+
+quit()
