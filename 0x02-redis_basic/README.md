@@ -14,20 +14,7 @@ This project contains tasks for learning to use the Redis NoSQL data storage app
   + In this exercise we will create a `get` method that take a `key` string argument and an optional `Callable` argument named `fn`. This callable will be used to convert the data back to the desired format.
   + Remember to conserve the original `Redis.get` behavior if the key does not exist.
   + Also, implement 2 new methods: `get_str` and `get_int` that will automatically parametrize `Cache.get` with the correct conversion function.
-  + The following code should not raise an Exception:
-    ```python
-    cache = Cache()
-
-    TEST_CASES = {
-        b"foo": None,
-        123: int,
-        "bar": lambda d: d.decode("utf-8")
-    }
-
-    for value, fn in TEST_CASES.items():
-        key = cache.store(value)
-        assert cache.get(key, fn=fn) == value
-    ```
+ 
 
 + [x] 2. **Incrementing values**<br/>[exercise.py](exercise.py) contains a Python script with the following updates to the previous task:
   + Familiarize yourself with the `INCR` command and its python equivalent.
@@ -51,18 +38,8 @@ This project contains tasks for learning to use the Redis NoSQL data storage app
 
 + [x] 4. **Retrieving lists**<br/>[exercise.py](exercise.py) contains a Python script with the following updates to the previous task:
   + In this task, we will implement a `replay` function to display the history of calls of a particular function.
-  + The output generated should look like this:
-    ```py
-    >>> cache = Cache()
-    >>> cache.store("foo")
-    >>> cache.store("bar")
-    >>> cache.store(42)
-    >>> replay(cache.store)
-    Cache.store was called 3 times:
-    Cache.store(*('foo',)) -> 13bf32a9-a249-4664-95fc-b1062db2038f
-    Cache.store(*('bar',)) -> dcddd00c-4219-4dd7-8877-66afbe8e7df8
-    Cache.store(*(42,)) -> 5e752f2b-ecd8-4925-a3ce-e2efdee08d20
-    ```
+ tore(*(42,)) -> 5e752f2b-ecd8-4925-a3ce-e2efdee08d20
+
 
 + [x] 5. **Implementing an expiring web cache and tracker**<br/>[web.py](web.py) contains a Python script that meets the following requirements:
   + In this tasks, we will implement a `get_page` function (prototype: `def get_page(url: str) -> str:`). The core of the function is very simple. It uses the `requests` module to obtain the HTML content of a particular URL and returns it.
